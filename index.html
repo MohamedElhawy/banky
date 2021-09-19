@@ -24,10 +24,224 @@
         
     </head>
 
-
-
     <body>
         
+        <header class="header">
+
+            <div class="header-text">
+                <p>Good Afternoon, Jessica!</p>
+            </div>
+
+            <div class="header-img">
+                <img src="./resources/icons/bankIcon.png" alt="bank icon">
+            </div>
+
+            <div class="header-account">
+                <input type="text" placeholder="user">
+                <input type="text" placeholder="bin">
+                <input type="image" src="./resources/images/east_black_24dp.svg" alt="arrow icon">
+            </div>
+
+        </header>
+
+        <main class="main">
+
+            <!-- balance header -->
+            <div class="currentBalanceText">
+                <p>Current balance</p>
+                <p>As of <span>7/31/2020</span>, &nbsp;<span>6:39 PM</span> </p>
+            </div>
+
+            <!-- balance number -->
+            <div class="balanceNumber">
+                <span>$16,720.00</span>
+            </div>
+
+            <!-- balance log -->
+            <div class="transactionLog">
+
+                <!-- log entry -->
+                <div class="transactionLog-entry">
+                    <div class="entry-head">
+                        <div class="entry-states">9 DEPOSIT</div>
+                        <div class="entry-date">TODAY</div>
+                    </div>
+                    <div class="entry-amount">$5,000.00</div>
+                </div>
+
+                <!-- log entry -->
+                <div class="transactionLog-entry">
+                    <div class="entry-head">
+                        <div class="entry-states">8 WITHDRAWAL</div>
+                        <div class="entry-date">2/26/2020</div>
+                    </div>
+                    <div class="entry-amount">-$30.00</div>
+                </div>
+
+                <!-- log entry -->
+                <div class="transactionLog-entry">
+                    <div class="entry-head">
+                        <div class="entry-states">7 DEPOSIT</div>
+                        <div class="entry-date">TODAY</div>
+                    </div>
+                    <div class="entry-amount">$8,500.00</div>
+                </div>
+
+                <!-- log entry -->
+                <div class="transactionLog-entry">
+                    <div class="entry-head">
+                        <div class="entry-states">6 WITHDRAWAL</div>
+                        <div class="entry-date">TODAY</div>
+                    </div>
+                    <div class="entry-amount">-$1,000.00</div>
+                </div>
+
+                <!-- log entry -->
+                <div class="transactionLog-entry">
+                    <div class="entry-head">
+                        <div class="entry-states">5 WITHDRAWAL</div>
+                        <div class="entry-date">TODAY</div>
+                    </div>
+                    <div class="entry-amount">-$3,210.00</div>
+                </div>
+
+                <!-- log entry -->
+                <div class="transactionLog-entry">
+                    <div class="entry-head">
+                        <div class="entry-states">4 WITHDRAWAL</div>
+                        <div class="entry-date">TODAY</div>
+                    </div>
+                    <div class="entry-amount">-$790.00</div>
+                </div>
+
+                <!-- log entry -->
+                <div class="transactionLog-entry">
+                    <div class="entry-head">
+                        <div class="entry-states">3 WITHDRAWAL</div>
+                        <div class="entry-date">TODAY</div>
+                    </div>
+                    <div class="entry-amount">-$150.00</div>
+                </div>
+
+            </div>
+
+
+
+            <!-- transaction tools -->
+            <div class="transactionTools">
+
+                <!-- transfer money -->
+                <div class="transferMoney">
+
+                    <div class="transferMoney-title">
+                        <p>Transfer money</p>
+                    </div>
+
+                    <div class="transferMoney-inputs">
+
+                        <div class="transferMoney-inputs-to">
+                            <input type="text" id="transferTo">
+                            <label for="transferTo">Transfer to</label>
+                        </div>
+
+                        <div class="transferMoney-inputs-amount">
+                            <input type="text" id="amount">
+                            <label for="amount">Amount</label>
+                        </div>
+
+                        <input type="image" src="./resources/images/east_black_24dp.svg" alt="arrow icon">
+
+                    </div>
+
+
+                </div>
+
+                <!-- request loan -->
+                <div class="requestLoan">
+
+                    <div class="requestLoan-title">
+                        <p>Request loan</p>
+                    </div>
+
+                    <div class="requestLoan-inputs">
+
+                        <div class="requestLoan-inputs-amount">
+                            <input type="text" id="loadAmount">
+                            <label for="loadAmount">Amount</label>
+                        </div>
+
+                        <input type="image" src="./resources/images/east_black_24dp.svg" alt="arrow icon">
+
+                    </div>
+
+
+                </div>
+
+                <!-- close account -->
+                <div class="closeAccount">
+
+                    <div class="closeAccount-title">
+                        <p>Close account</p>
+                    </div>
+
+                    <div class="closeAccount-inputs">
+
+                        <div class="closeAccount-inputs-confirmUser">
+                            <input type="text" id="confirmUser">
+                            <label for="confirmUser">Confirm user</label>
+                        </div>
+
+                        <div class="closeAccount-inputs-confirmPIN">
+                            <input type="text" id="confirmPIN">
+                            <label for="confirmPIN">Confirm PIN</label>
+                        </div>
+
+                        <input type="image" src="./resources/images/east_black_24dp.svg" alt="arrow icon">
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- transaction status -->
+            <div class="transactionStatus">
+
+                <div class="transactionStatus-in">
+                    IN <span>$21,900.00</span>
+                </div>
+
+                <div class="transactionStatus-out">
+                    OUT <span>$5,180.00</span>
+                </div>
+
+                <div class="transactionStatus-interest">
+                    INTEREST <span>$328.50</span>
+                </div>
+
+                <div> <img src="./resources/images/east_black_24dp.svg" alt="arrow icon"> SORT</div>
+
+            </div>
+
+
+
+            <!-- logging out status -->
+            <div class="logOutStatus">
+                You will be logged out in <span>03:35</span>
+            </div>
+
+
+
+
+
+
+
+        </main>
+
     </body>
 
 </html>

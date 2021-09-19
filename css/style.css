@@ -1,10 +1,23 @@
 
+/* import fonts */
+@font-face {
+    font-family: rubik;
+    src: url(../resources/fonts/Rubik-VariableFont_wght.ttf);
+}
+
+
 /* global reset */
 *
 {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+*:focus
+{
+    outline: none;
+    box-shadow: 0 0 1px 6px rgb(0 0 0 / 20%);
 }
 
 a
@@ -20,3 +33,82 @@ html , body
 
 
 /* ------------------------------------------- */
+
+
+body
+{
+    background-color: whitesmoke;
+    font-family: rubik , sans-serif;
+}
+
+
+/* header */
+.header{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    font-size: 20px;
+    background: rgb(229 229 229);
+}
+
+/* header text */
+.header-text{
+    font-weight: 500;
+}
+
+/* header image */
+.header-img{
+    user-select: none;
+}
+.header-img img
+{
+    width: 64px;
+}
+
+/* header account */
+.header-account{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+}
+
+.header-account input[type=text]
+{
+    border: none;
+    padding: 12px;
+    border-radius: 40px;
+    width: 40%;
+    text-align: center;
+    font-size: 16px;
+    color: gray;
+}
+
+.header-account input[type=text]::placeholder
+{
+    color: rgba(128, 128, 128, 0.6);
+}
+.header-account input[type=text]::-webkit-input-placeholder 
+{
+    color: rgba(128, 128, 128, 0.6);
+}
+.header-account input[type=text]:-ms-input-placeholder
+{
+    color: rgba(128, 128, 128, 0.6);
+}
+.header-account input[type=text]:-moz-input-placeholder
+{
+    color: rgba(128, 128, 128, 0.6);
+}
+
+.header-account input[type=image]
+{
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    border-radius: 40px;
+    user-select: none;
+}
