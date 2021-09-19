@@ -34,6 +34,10 @@ html , body
 
 /* ------------------------------------------- */
 
+html
+{
+    overflow: hidden;
+}
 
 body
 {
@@ -42,7 +46,7 @@ body
 }
 
 
-/* header */
+/* ----------------------  header  ------------------------------*/
 .header{
     height: 10%;
     display: flex;
@@ -55,7 +59,8 @@ body
 
 /* header text */
 .header-text{
-    font-weight: 500;
+    font-weight: 700;
+    color: #444444;
 }
 
 /* header image */
@@ -73,6 +78,7 @@ body
     justify-content: space-between;
     align-items: center;
     width: 25%;
+    user-select: none;
 }
 
 .header-account input[type=text]
@@ -111,4 +117,263 @@ body
     border: none;
     border-radius: 40px;
     user-select: none;
+}
+
+
+/* ----------------------  main  ------------------------------*/
+.main
+{
+    height: 90%;
+    color: gray;
+}
+
+
+/* panel - grid ---------------------------------------*/
+.panel
+{
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15fr 70fr 15fr;
+    grid-gap: 15px;
+    padding: 50px 0 10px 0;
+}
+
+
+
+/* balance header ------------------------------------*/
+.currentBalanceText{
+
+}
+.currentBalanceText-header{
+    font-size: 32px;
+    font-weight: 700;
+    color: #4a4a4a;;
+}
+.currentBalanceText-time{
+    font-size: 14px;
+}
+
+
+
+/* balance number ----------------------------------*/
+.balanceNumber
+{
+    color: #4a4a4a;
+    font-size: 48px;
+    justify-self: end;
+}
+
+
+
+/* transaction log -----------------------------*/
+.transactionLog{
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    color: #5e5e5e;
+    overflow: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.transactionLog::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+.transactionLog {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+
+.transactionLog-entry{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.entry-head{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+.entry-states{
+    padding: 10px;
+    background: linear-gradient(-22deg, mediumspringgreen, rgb(255 255 255 / 70%)) , mediumspringgreen;
+    border-radius: 25px;
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+    user-select: none;
+}
+
+.withdrawal
+{
+    background: linear-gradient(-22deg, red, rgb(255 255 255 / 70%)) , red;
+}
+
+
+.entry-date{
+    font-size: 12px;
+    font-weight: 700;
+}
+.entry-amount{
+    color: #444444;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* transaction tools -----------------------------*/
+
+.transactionTools{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.transferMoney , .requestLoan , .closeAccount{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background: linear-gradient( 173deg, rgb(255 255 255 / 45%), rgb(255 165 0 / 20%)) , orange;
+    color: #444444;
+    font-size: 20px;
+    font-weight: 700;
+    gap: 15px;
+    border-radius: 15px;
+}
+.requestLoan
+{
+    background: linear-gradient( 173deg, rgb(255 255 255 / 45%), rgb(34 139 34 / 20%)) , forestgreen;
+}
+
+.closeAccount
+{
+    background: linear-gradient( 173deg, rgb(255 255 255 / 45%), rgb(255 0 0 / 20%)) , red;
+}
+
+
+.transferMoney-title , .requestLoan-title , .closeAccount-title{
+    user-select: none;
+}
+.transferMoney-inputs , .requestLoan-inputs , .closeAccount-inputs{
+    display: flex;
+    font-size: 13px;
+    gap: 20px;
+}
+.transferMoney-inputs-to , .transferMoney-inputs-amount , .requestLoan-inputs-amount , .closeAccount-inputs-confirmUser , .closeAccount-inputs-confirmPIN{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.transferMoney-inputs-to input[type=text] , .transferMoney-inputs-amount input[type=text] , .requestLoan-inputs-amount input[type=text] , .closeAccount-inputs-confirmUser input[type=text] , .closeAccount-inputs-confirmPIN input[type=text] {
+    border: none;
+    height: 35px;
+    border-radius: 9px;
+    background: rgb(255 255 255 / 40%);
+    padding: 5px 15px;
+    font-size: 16px;
+    color: #646464;
+    text-align: center;
+}
+
+.transferMoney-inputs-to label , .transferMoney-inputs-amount label , .requestLoan-inputs-amount label , .closeAccount-inputs-confirmUser label , .closeAccount-inputs-confirmPIN label{
+    text-align: center;
+    user-select: none;
+}
+
+.transferMoney-inputs-btn , .requestLoan-inputs-btn , .closeAccount-inputs-btn
+{
+    background: white;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    cursor: pointer;
+    height: 35px;
+    user-select: none;
+}
+
+.transferMoney-inputs-btn:hover , .requestLoan-inputs-btn:hover , .closeAccount-inputs-btn:hover
+{
+    filter: brightness(0.9);
+}
+
+.transferMoney-inputs-btn input[type=image] , .requestLoan-inputs-btn input[type=image] , .closeAccount-inputs-btn input[type=image]
+{
+    box-shadow: none;
+}
+
+.transferMoney-inputs-btn input[type=image]
+{
+    width: 28px;
+}
+
+
+
+.transactionStatus
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transactionStatus{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #202020;
+    font-size: 12px;
+    font-weight: 700;
+}
+.transactionStatus-in span , .transactionStatus-interest span , .transactionStatus-sort span 
+{
+    color: limegreen;
+    font-size: 24px;
+    margin-left: 5px;
+
+}
+.transactionStatus-out span
+{
+    color: red;
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+.transactionStatus-sort
+{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.transactionStatus-sort img
+{
+    width: 18px;
+    transform: rotate(90deg);
+}
+
+
+.logOutStatus
+{
+    align-self: center;
+    justify-self: end;
+    font-size: 14px;
+    color: #202020;
+    user-select: none;
+}
+
+.logOutStatus span
+{
+    font-weight: 700;
 }
