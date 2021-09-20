@@ -394,3 +394,6 @@ function sortingLog ()
 
 
 sortBtn.addEventListener ("click" , sortingLog);
+
+
+
