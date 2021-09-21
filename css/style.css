@@ -197,13 +197,15 @@ body
     background: white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
 }
 .entry-head{
     display: flex;
-    width: 40%;
+    width: 50%;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 .entry-states{
     padding: 10px;
@@ -214,6 +216,24 @@ body
     color: white;
     user-select: none;
 }
+.entry-offset
+{
+    visibility: hidden;
+    padding: 3px;
+    background: linear-gradient(
+338deg, rgb(255 215 0 / 50%), rgb(255 255 255 / 50%)) , gold;
+    color: white;
+    border-radius: 15px;
+    position: absolute;
+    right: -75px;
+    transform: translateX(50%);
+    font-size: 15px;
+}
+.offset-visible
+{
+    visibility: visible !important;
+}
+
 
 .withdrawal
 {
