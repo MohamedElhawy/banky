@@ -397,3 +397,98 @@ sortBtn.addEventListener ("click" , sortingLog);
 
 
 
+// test
+
+const dogs = [
+    {weight: 22 , curFood: 250,owners: ['Alice' , 'Bob']},
+    {weight: 8 , curFood: 200,owners: ['Matilda']},
+    {weight: 13 , curFood: 275,owners: ['Sarah' , 'John']},
+    {weight: 32 , curFood: 340,owners: ['Michael']}
+];
+
+
+// 1
+
+dogs.forEach(
+
+    function (el)
+    {
+        el.recommendedFood = el.weight ** 0.75 * 28;
+    }
+
+);
+
+console.log(dogs);
+
+
+
+// 2
+
+let sarahDog = dogs.find( 
+    function (e)
+    {
+        return e.owners.includes("Sarah");
+    }
+);
+
+if ( sarahDog.recommendedFood < (sarahDog.curFood) )
+{
+    console.log("Too Much");
+}
+else if ( sarahDog.recommendedFood > (sarahDog.curFood) )
+{
+    console.log("Too little");
+}
+
+
+
+// 3
+
+let ownersEatTooMuch = [];
+let ownersEatTooLittle = [];
+
+let dogsEatTooMuch = dogs.filter( (el) => { return el.curFood > el.recommendedFood } );
+let dogsEatTooLittle = dogs.filter( (el) => { return el.curFood < el.recommendedFood } );
+
+
+ownersEatTooMuch = dogsEatTooMuch.map( (el) => { return el.owners} ).flat();
+ownersEatTooLittle = dogsEatTooLittle.map( (el) => { return el.owners} ).flat();
+
+console.log(ownersEatTooMuch);
+console.log(ownersEatTooLittle);
+
+// 4
+
+let stringOwnserEatTooMuch = ownersEatTooMuch.join(" and ");
+console.log(`${stringOwnserEatTooMuch}'s dogs eat too much!`);
+
+let stringOwnserEatTooLittle = ownersEatTooLittle.join(" and ");
+console.log(`${stringOwnserEatTooLittle}'s dogs eat too Little!`);
+
+
+// 5
+
+
+let dogOkayAmount = dogs.some( (dog) => {return dog.curFood === dog.recommendedFood } );
+
+console.log(dogOkayAmount);
+
+
+
+// 6
+
+let dogExactAmount = dogs.some( (dog) => {return dog.curFood >= (dog.recommendedFood * 0.9) && dog.curFood <= (dog.recommendedFood * 1.1) } );
+
+console.log(dogExactAmount);
+
+
+
+// 7
+
+let dogsEatingOkayAmount = dogs.filter( (dog) => { return ( dog.curFood >= (dog.recommendedFood * 0.9) && dog.curFood <= (dog.recommendedFood * 1.1) )  } );
+console.log(dogsEatingOkayAmount);
+
+// 8
+
+let dogs2_0 = [...dogs].sort( (a , b) => {return a.recommendedFood - b.recommendedFood } );
+console.log(dogs2_0);
